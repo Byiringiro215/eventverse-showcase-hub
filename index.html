@@ -1,26 +1,611 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eventverse-showcase-hub</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventVerse - Discover & Register for Global Events</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-offset="70">
 
-    <meta property="og:title" content="eventverse-showcase-hub" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-scrollspy">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-calendar-event me-2"></i>EventVerse
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Technology</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><a class="dropdown-item" href="#">Arts & Culture</a></li>
+                            <li><a class="dropdown-item" href="#">Sports</a></li>
+                            <li><a class="dropdown-item" href="#">Education</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+            </div>
+        </div>
+    </nav>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="hero-title mb-4">Discover & Register for Global Events Instantly</h1>
+                    <p class="hero-subtitle mb-4">Explore conferences, workshops, and experiences in one place. Connect with like-minded people and expand your horizons.</p>
+                    <div class="hero-buttons">
+                        <a href="events.html" class="btn btn-primary btn-lg me-3">Explore Events</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                    
+                    <!-- Countdown Timer -->
+                    <div class="countdown-timer mt-5">
+                        <h6 class="text-light mb-3">Next Big Event Starts In:</h6>
+                        <div class="d-flex gap-3">
+                            <div class="countdown-item">
+                                <span class="countdown-number">15</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">08</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">23</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Scrollspy Navigation -->
+    <nav class="scrollspy-nav sticky-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#overview">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#events-carousel">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Event Overview" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Your Gateway to Amazing Events</h2>
+                    <p class="section-text">EventVerse connects you with the most exciting events happening around the world. From tech conferences to art exhibitions, we curate experiences that matter.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Over 10,000 events worldwide</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Instant registration process</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Personalized recommendations</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>24/7 customer support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Why Choose EventVerse?</h2>
+                    <p class="section-subtitle">Discover what makes us the preferred platform for event discovery</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="feature-card card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-stars"></i>
+                            </div>
+                            <h5 class="card-title">Curated Events</h5>
+                            <p class="card-text">Hand-picked events from trusted organizers worldwide. Quality experiences guaranteed.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="feature-card card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+                            <h5 class="card-title">Easy Registration</h5>
+                            <p class="card-text">Register for events in just a few clicks. Secure payment and instant confirmation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="feature-card card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-person-check"></i>
+                            </div>
+                            <h5 class="card-title">Personalized Recommendations</h5>
+                            <p class="card-text">AI-powered suggestions based on your interests and past attendance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events Carousel -->
+    <section id="events-carousel" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Featured Events</h2>
+                    <p class="section-subtitle">Don't miss these upcoming amazing events</p>
+                </div>
+            </div>
+            
+            <div id="featuredEventsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#featuredEventsCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#featuredEventsCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#featuredEventsCarousel" data-bs-slide-to="2"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="event-card card h-100 border-0 shadow">
+                                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         class="card-img-top" alt="Tech Conference">
+                                    <div class="card-body">
+                                        <span class="badge bg-primary mb-2">Technology</span>
+                                        <h5 class="card-title">Global Tech Summit 2024</h5>
+                                        <p class="card-text">Join leading tech innovators for insights into AI, blockchain, and the future of technology.</p>
+                                        <div class="event-meta">
+                                            <small class="text-muted">
+                                                <i class="bi bi-calendar me-1"></i>March 15, 2024
+                                                <i class="bi bi-geo-alt ms-3 me-1"></i>San Francisco
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="event.html" class="btn btn-primary w-100">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="event-card card h-100 border-0 shadow">
+                                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         class="card-img-top" alt="Art Exhibition">
+                                    <div class="card-body">
+                                        <span class="badge bg-secondary mb-2">Arts & Culture</span>
+                                        <h5 class="card-title">Modern Art Exhibition</h5>
+                                        <p class="card-text">Explore contemporary art from emerging artists around the world in this exclusive showcase.</p>
+                                        <div class="event-meta">
+                                            <small class="text-muted">
+                                                <i class="bi bi-calendar me-1"></i>March 20, 2024
+                                                <i class="bi bi-geo-alt ms-3 me-1"></i>New York
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="event.html" class="btn btn-primary w-100">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="event-card card h-100 border-0 shadow">
+                                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         class="card-img-top" alt="Business Workshop">
+                                    <div class="card-body">
+                                        <span class="badge bg-success mb-2">Business</span>
+                                        <h5 class="card-title">Startup Accelerator Workshop</h5>
+                                        <p class="card-text">Learn from successful entrepreneurs and investors about building scalable businesses.</p>
+                                        <div class="event-meta">
+                                            <small class="text-muted">
+                                                <i class="bi bi-calendar me-1"></i>March 25, 2024
+                                                <i class="bi bi-geo-alt ms-3 me-1"></i>London
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="event.html" class="btn btn-primary w-100">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="event-card card h-100 border-0 shadow">
+                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         class="card-img-top" alt="Sports Event">
+                                    <div class="card-body">
+                                        <span class="badge bg-warning mb-2">Sports</span>
+                                        <h5 class="card-title">Marathon Championship</h5>
+                                        <p class="card-text">Join thousands of runners in this international marathon championship event.</p>
+                                        <div class="event-meta">
+                                            <small class="text-muted">
+                                                <i class="bi bi-calendar me-1"></i>April 5, 2024
+                                                <i class="bi bi-geo-alt ms-3 me-1"></i>Boston
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="event.html" class="btn btn-primary w-100">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="event-card card h-100 border-0 shadow">
+                                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         class="card-img-top" alt="Education Conference">
+                                    <div class="card-body">
+                                        <span class="badge bg-info mb-2">Education</span>
+                                        <h5 class="card-title">Future of Learning Conference</h5>
+                                        <p class="card-text">Discover innovative teaching methods and educational technologies shaping tomorrow.</p>
+                                        <div class="event-meta">
+                                            <small class="text-muted">
+                                                <i class="bi bi-calendar me-1"></i>April 10, 2024
+                                                <i class="bi bi-geo-alt ms-3 me-1"></i>Chicago
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="event.html" class="btn btn-primary w-100">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="event-card card h-100 border-0 shadow">
+                                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                         class="card-img-top" alt="Food Festival">
+                                    <div class="card-body">
+                                        <span class="badge bg-danger mb-2">Food & Drink</span>
+                                        <h5 class="card-title">International Food Festival</h5>
+                                        <p class="card-text">Taste cuisines from around the world and meet renowned chefs in this culinary celebration.</p>
+                                        <div class="event-meta">
+                                            <small class="text-muted">
+                                                <i class="bi bi-calendar me-1"></i>April 15, 2024
+                                                <i class="bi bi-geo-alt ms-3 me-1"></i>Paris
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <a href="event.html" class="btn btn-primary w-100">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredEventsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredEventsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">What Our Users Say</h2>
+                    <p class="section-subtitle">Join thousands of satisfied event-goers</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text">"EventVerse made finding and attending industry conferences so much easier. The recommendation system is spot-on!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                     alt="Sarah Johnson" class="testimonial-avatar rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Product Manager</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text">"The platform is incredibly user-friendly. I've discovered so many amazing events I wouldn't have found otherwise."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                     alt="Michael Chen" class="testimonial-avatar rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">Software Engineer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text">"As an event organizer, EventVerse has helped us reach a wider audience and streamline our registration process."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                     alt="Emily Rodriguez" class="testimonial-avatar rounded-circle me-3">
+                                <div>
+                                    <h6 class="mb-0">Emily Rodriguez</h6>
+                                    <small class="text-muted">Event Organizer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Stay Updated with EventVerse</h3>
+                    <p class="mb-4">Get notified about new events, special offers, and exclusive content.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email address">
+                        <button class="btn btn-outline-light" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <h5 class="mb-3">
+                        <i class="bi bi-calendar-event me-2"></i>EventVerse
+                    </h5>
+                    <p>Your gateway to amazing events worldwide. Discover, connect, and experience the extraordinary.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="events.html" class="text-light text-decoration-none">Browse Events</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Categories</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Technology</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Business</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Arts & Culture</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Sports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i>support@eventverse.com</li>
+                        <li><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 EventVerse. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register for EventVerse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Interests</label>
+                            <select class="form-select">
+                                <option>Technology</option>
+                                <option>Business</option>
+                                <option>Arts & Culture</option>
+                                <option>Sports</option>
+                                <option>Education</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Countdown timer animation
+        function updateCountdown() {
+            const countdownElements = document.querySelectorAll('.countdown-number');
+            countdownElements.forEach(element => {
+                let currentValue = parseInt(element.textContent);
+                if (currentValue > 0) {
+                    element.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        element.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        }
+
+        setInterval(updateCountdown, 60000); // Update every minute
+    </script>
+</body>
 </html>

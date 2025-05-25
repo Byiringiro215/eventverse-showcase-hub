@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - EventVerse</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-calendar-event me-2"></i>EventVerse
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title mb-3">Frequently Asked Questions</h1>
+                    <p class="page-subtitle">Find answers to common questions about EventVerse</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Search -->
+    <section class="py-4 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" id="faqSearch" placeholder="Search FAQ...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <div class="faq-categories">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-outline-primary active" data-category="all">All Questions</button>
+                    <button class="btn btn-outline-primary" data-category="general">General</button>
+                    <button class="btn btn-outline-primary" data-category="account">Account</button>
+                    <button class="btn btn-outline-primary" data-category="events">Events</button>
+                    <button class="btn btn-outline-primary" data-category="payment">Payment</button>
+                    <button class="btn btn-outline-primary" data-category="technical">Technical</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        
+                        <!-- General Questions -->
+                        <div class="accordion-item faq-item" data-category="general">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="bi bi-question-circle me-2"></i>
+                                    What is EventVerse?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    EventVerse is a comprehensive event discovery and registration platform that connects event organizers with attendees worldwide. We make it easy to find, register for, and attend events that match your interests, from tech conferences to art exhibitions and everything in between.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="general">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="bi bi-question-circle me-2"></i>
+                                    How do I find events on EventVerse?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can find events using our search and filter tools on the Events page. Search by keywords, filter by category, location, date, and price range. You can also browse featured events on our homepage or get personalized recommendations based on your interests.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="general">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="bi bi-question-circle me-2"></i>
+                                    Is EventVerse free to use?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, browsing and discovering events on EventVerse is completely free. You only pay when you register for paid events. Free events remain free, and we don't charge any additional fees beyond what the event organizer sets.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Questions -->
+                        <div class="accordion-item faq-item" data-category="account">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="bi bi-person-circle me-2"></i>
+                                    Do I need an account to register for events?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, you need to create a free EventVerse account to register for events. This allows you to manage your registrations, receive event updates, and get personalized recommendations. Creating an account takes less than a minute!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="account">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="bi bi-person-circle me-2"></i>
+                                    How do I reset my password?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Click on "Forgot Password" on the login page and enter your email address. We'll send you a secure link to reset your password. If you don't receive the email within a few minutes, check your spam folder or contact our support team.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="account">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    <i class="bi bi-person-circle me-2"></i>
+                                    Can I delete my account?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, you can delete your account at any time from your account settings. Please note that this action is permanent and cannot be undone. Make sure to cancel any upcoming event registrations before deleting your account.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Questions -->
+                        <div class="accordion-item faq-item" data-category="events">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    <i class="bi bi-calendar-event me-2"></i>
+                                    How do I register for an event?
+                                </button>
+                            </h2>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Simply find the event you want to attend, click "Register Now," fill out the registration form, and complete payment if required. You'll receive a confirmation email with your ticket and event details immediately after successful registration.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="events">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                    <i class="bi bi-calendar-event me-2"></i>
+                                    Can I transfer my ticket to someone else?
+                                </button>
+                            </h2>
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ticket transfer policies depend on the event organizer. Some events allow transfers while others don't. Check the event details page or contact the organizer directly for their specific transfer policy.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="events">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                                    <i class="bi bi-calendar-event me-2"></i>
+                                    What happens if an event is cancelled?
+                                </button>
+                            </h2>
+                            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    If an event is cancelled, you'll be notified immediately via email and receive a full refund within 5-7 business days. The event organizer may also offer alternative dates or virtual participation options.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Questions -->
+                        <div class="accordion-item faq-item" data-category="payment">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                                    <i class="bi bi-credit-card me-2"></i>
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, and Google Pay. All payments are processed securely through our encrypted payment system.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="payment">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+                                    <i class="bi bi-credit-card me-2"></i>
+                                    What is your refund policy?
+                                </button>
+                            </h2>
+                            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Refund policies are set by individual event organizers. Most events offer full refunds up to 30 days before the event, partial refunds between 30-14 days, and no refunds within 14 days. Check the specific event's refund policy before registering.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="payment">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+                                    <i class="bi bi-credit-card me-2"></i>
+                                    Are there any additional fees?
+                                </button>
+                            </h2>
+                            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    EventVerse does not charge additional service fees to attendees. The price you see is the price you pay. However, standard payment processing fees may apply depending on your payment method and location.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Questions -->
+                        <div class="accordion-item faq-item" data-category="technical">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13">
+                                    <i class="bi bi-gear me-2"></i>
+                                    What browsers are supported?
+                                </button>
+                            </h2>
+                            <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    EventVerse works on all modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version of your preferred browser for the best experience. Our platform is also mobile-friendly and works great on smartphones and tablets.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="technical">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14">
+                                    <i class="bi bi-gear me-2"></i>
+                                    I'm having trouble accessing my account. What should I do?
+                                </button>
+                            </h2>
+                            <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    First, try clearing your browser cache and cookies, or try accessing your account from a different browser or device. If you're still having trouble, contact our support team at support@eventverse.com with details about the issue you're experiencing.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item faq-item" data-category="technical">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15">
+                                    <i class="bi bi-gear me-2"></i>
+                                    Do you have a mobile app?
+                                </button>
+                            </h2>
+                            <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Currently, EventVerse is available as a responsive web application that works perfectly on mobile devices. We're working on dedicated iOS and Android apps, which will be available soon. Follow us on social media for updates!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Support Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="support-cta">
+                        <h3 class="mb-3">Still have questions?</h3>
+                        <p class="mb-4">Can't find the answer you're looking for? Our support team is here to help!</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="contact.html" class="btn btn-primary btn-lg">
+                                <i class="bi bi-envelope me-2"></i>Contact Support
+                            </a>
+                            <button class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-chat-dots me-2"></i>Start Live Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register for EventVerse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Interests</label>
+                            <select class="form-select">
+                                <option>Technology</option>
+                                <option>Business</option>
+                                <option>Arts & Culture</option>
+                                <option>Sports</option>
+                                <option>Education</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <h5 class="mb-3">
+                        <i class="bi bi-calendar-event me-2"></i>EventVerse
+                    </h5>
+                    <p>Your gateway to amazing events worldwide. Discover, connect, and experience the extraordinary.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="events.html" class="text-light text-decoration-none">Browse Events</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Categories</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Technology</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Business</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Arts & Culture</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Sports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i>support@eventverse.com</li>
+                        <li><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 EventVerse. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // FAQ Search functionality
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const title = item.querySelector('.accordion-button').textContent.toLowerCase();
+                const content = item.querySelector('.accordion-body').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // FAQ Category filtering
+        document.querySelectorAll('[data-category]').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.dataset.category;
+                const faqItems = document.querySelectorAll('.faq-item');
+                
+                // Update active button
+                document.querySelectorAll('[data-category]').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter FAQ items
+                faqItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Clear search
+                document.getElementById('faqSearch').value = '';
+            });
+        });
+    </script>
+
+    <style>
+        .faq-categories .btn {
+            border-radius: 25px;
+            margin: 0.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-categories .btn.active {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: white;
+        }
+
+        .accordion-button {
+            font-weight: 500;
+            padding: 1.25rem 1.5rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(108, 99, 255, 0.25);
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .support-cta {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .faq-categories {
+                text-align: center;
+            }
+            
+            .faq-categories .btn {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</body>
+</html>

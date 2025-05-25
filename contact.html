@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EventVerse</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-calendar-event me-2"></i>EventVerse
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title mb-3">Contact Us</h1>
+                    <p class="page-subtitle">We're here to help. Get in touch with our team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send us a Message</h3>
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your last name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="billing">Billing Question</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="feedback">Feedback & Suggestions</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a subject.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="6" placeholder="Please describe your inquiry in detail..." required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please provide a message.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for event updates and announcements
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <span class="spinner-border spinner-border-sm me-2 d-none" id="submitSpinner"></span>
+                                        <i class="bi bi-send me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info Sidebar -->
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Get in Touch</h4>
+                        
+                        <!-- Contact Cards -->
+                        <div class="contact-card card border-0 shadow-sm mb-4">
+                            <div class="card-body text-center">
+                                <div class="contact-icon mb-3">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <h6>Email Us</h6>
+                                <p class="text-muted mb-2">General inquiries</p>
+                                <a href="mailto:support@eventverse.com" class="text-decoration-none">support@eventverse.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card card border-0 shadow-sm mb-4">
+                            <div class="card-body text-center">
+                                <div class="contact-icon mb-3">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <h6>Call Us</h6>
+                                <p class="text-muted mb-2">Monday - Friday, 9 AM - 6 PM PST</p>
+                                <a href="tel:+15551234567" class="text-decoration-none">+1 (555) 123-4567</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card card border-0 shadow-sm mb-4">
+                            <div class="card-body text-center">
+                                <div class="contact-icon mb-3">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <h6>Visit Us</h6>
+                                <p class="text-muted mb-2">Our headquarters</p>
+                                <address class="mb-0">
+                                    123 Innovation Street<br>
+                                    San Francisco, CA 94102<br>
+                                    United States
+                                </address>
+                            </div>
+                        </div>
+
+                        <div class="contact-card card border-0 shadow-sm mb-4">
+                            <div class="card-body text-center">
+                                <div class="contact-icon mb-3">
+                                    <i class="bi bi-chat-dots"></i>
+                                </div>
+                                <h6>Live Chat</h6>
+                                <p class="text-muted mb-2">Available 24/7</p>
+                                <button class="btn btn-outline-primary btn-sm">Start Chat</button>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-section">
+                            <h6 class="mb-3">Follow Us</h6>
+                            <div class="social-links">
+                                <a href="#" class="me-3" data-bs-toggle="tooltip" title="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="#" class="me-3" data-bs-toggle="tooltip" title="Twitter">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                                <a href="#" class="me-3" data-bs-toggle="tooltip" title="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                                <a href="#" class="me-3" data-bs-toggle="tooltip" title="LinkedIn">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="#" data-bs-toggle="tooltip" title="YouTube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-5">Find Our Office</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0977467708!2d-122.40168!3d37.7848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ3JzA1LjMiTiAxMjLCsDI0JzA2LjAiVw!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus" 
+                                width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Info Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h3>Need Quick Help?</h3>
+                    <p class="text-muted">Check out these resources for immediate assistance</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="support-card card border-0 shadow-sm text-center h-100">
+                        <div class="card-body">
+                            <div class="support-icon mb-3">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h5>FAQ</h5>
+                            <p class="text-muted">Find answers to commonly asked questions about EventVerse.</p>
+                            <a href="faq.html" class="btn btn-outline-primary">View FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="support-card card border-0 shadow-sm text-center h-100">
+                        <div class="card-body">
+                            <div class="support-icon mb-3">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h5>Help Center</h5>
+                            <p class="text-muted">Browse our comprehensive guides and tutorials.</p>
+                            <a href="#" class="btn btn-outline-primary">Help Center</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="support-card card border-0 shadow-sm text-center h-100">
+                        <div class="card-body">
+                            <div class="support-icon mb-3">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <h5>24/7 Support</h5>
+                            <p class="text-muted">Get immediate help through our live chat support.</p>
+                            <button class="btn btn-outline-primary">Start Chat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register for EventVerse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Interests</label>
+                            <select class="form-select">
+                                <option>Technology</option>
+                                <option>Business</option>
+                                <option>Arts & Culture</option>
+                                <option>Sports</option>
+                                <option>Education</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <h5 class="mb-3">
+                        <i class="bi bi-calendar-event me-2"></i>EventVerse
+                    </h5>
+                    <p>Your gateway to amazing events worldwide. Discover, connect, and experience the extraordinary.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="events.html" class="text-light text-decoration-none">Browse Events</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Categories</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Technology</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Business</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Arts & Culture</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Sports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i>support@eventverse.com</li>
+                        <li><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 EventVerse. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Form validation and submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (this.checkValidity()) {
+                const submitBtn = document.querySelector('button[type="submit"]');
+                const spinner = document.getElementById('submitSpinner');
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                spinner.classList.remove('d-none');
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                    
+                    // Reset form
+                    this.reset();
+                    this.classList.remove('was-validated');
+                    
+                    // Reset button
+                    submitBtn.disabled = false;
+                    spinner.classList.add('d-none');
+                    submitBtn.innerHTML = '<i class="bi bi-send me-2"></i>Send Message';
+                }, 2000);
+            }
+
+            this.classList.add('was-validated');
+        });
+    </script>
+
+    <style>
+        .contact-icon,
+        .support-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .contact-card,
+        .support-card {
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover,
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+        }
+
+        .was-validated .form-control:valid,
+        .was-validated .form-select:valid {
+            border-color: #28a745;
+        }
+
+        .was-validated .form-control:invalid,
+        .was-validated .form-select:invalid {
+            border-color: #dc3545;
+        }
+    </style>
+</body>
+</html>

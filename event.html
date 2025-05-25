@@ -1,0 +1,849 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Tech Summit 2024 - EventVerse</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-calendar-event me-2"></i>EventVerse
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Event Hero Banner -->
+    <section class="event-hero">
+        <div class="event-hero-image">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                 alt="Global Tech Summit 2024" class="w-100">
+            <div class="event-hero-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="event-meta-badges">
+                                <span class="badge bg-primary fs-6">Technology</span>
+                                <span class="badge bg-success fs-6"><i class="bi bi-calendar me-1"></i>Mar 15, 2024</span>
+                                <span class="badge bg-warning text-dark fs-6"><i class="bi bi-clock me-1"></i>9:00 AM</span>
+                                <span class="badge bg-info fs-6"><i class="bi bi-geo-alt me-1"></i>San Francisco</span>
+                            </div>
+                            <h1 class="event-title text-white mb-4">Global Tech Summit 2024</h1>
+                            <p class="event-subtitle text-white mb-4">Join leading tech innovators for insights into AI, blockchain, and the future of technology. Connect with industry experts and discover cutting-edge solutions.</p>
+                            <div class="event-actions">
+                                <button class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                                    <i class="bi bi-calendar-plus me-2"></i>Register Now
+                                </button>
+                                <button class="btn btn-outline-light btn-lg">
+                                    <i class="bi bi-share me-2"></i>Share Event
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- Countdown Timer -->
+                            <div class="countdown-widget">
+                                <h5 class="text-white mb-3">Event Starts In:</h5>
+                                <div class="countdown-display">
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">15</span>
+                                        <span class="countdown-label">Days</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">08</span>
+                                        <span class="countdown-label">Hours</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number">23</span>
+                                        <span class="countdown-label">Minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Info Tabs -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs nav-tabs-custom mb-4" id="eventTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">
+                                <i class="bi bi-info-circle me-2"></i>Overview
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="agenda-tab" data-bs-toggle="tab" data-bs-target="#agenda" type="button" role="tab">
+                                <i class="bi bi-list-task me-2"></i>Agenda
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="speakers-tab" data-bs-toggle="tab" data-bs-target="#speakers" type="button" role="tab">
+                                <i class="bi bi-people me-2"></i>Speakers
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="venue-tab" data-bs-toggle="tab" data-bs-target="#venue" type="button" role="tab">
+                                <i class="bi bi-geo-alt me-2"></i>Venue
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="eventTabContent">
+                        <!-- Overview Tab -->
+                        <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                            <div class="event-description">
+                                <h4 class="mb-4">About This Event</h4>
+                                <p>The Global Tech Summit 2024 brings together the brightest minds in technology to explore the latest innovations and trends shaping our digital future. This two-day conference features keynote presentations, panel discussions, and hands-on workshops covering artificial intelligence, blockchain technology, cybersecurity, and emerging technologies.</p>
+                                
+                                <h5 class="mt-4 mb-3">What You'll Learn</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Latest developments in AI and machine learning</li>
+                                    <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Blockchain applications beyond cryptocurrency</li>
+                                    <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Cybersecurity best practices for modern businesses</li>
+                                    <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Emerging technologies and their market impact</li>
+                                    <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Networking opportunities with industry leaders</li>
+                                </ul>
+
+                                <h5 class="mt-4 mb-3">Who Should Attend</h5>
+                                <p>This event is perfect for tech professionals, entrepreneurs, investors, researchers, and anyone interested in staying ahead of technological trends. Whether you're a seasoned developer or just starting your tech journey, you'll find valuable insights and connections.</p>
+                            </div>
+                        </div>
+
+                        <!-- Agenda Tab -->
+                        <div class="tab-pane fade" id="agenda" role="tabpanel">
+                            <h4 class="mb-4">Event Schedule</h4>
+                            
+                            <div class="agenda-day">
+                                <h5 class="text-primary mb-3">Day 1 - March 15, 2024</h5>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">9:00 AM</div>
+                                        <div class="timeline-content">
+                                            <h6>Registration & Networking Breakfast</h6>
+                                            <p>Welcome reception with light breakfast and networking opportunities</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">10:00 AM</div>
+                                        <div class="timeline-content">
+                                            <h6>Opening Keynote: The Future of AI</h6>
+                                            <p>Dr. Sarah Chen, AI Research Director at TechCorp</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">11:15 AM</div>
+                                        <div class="timeline-content">
+                                            <h6>Panel: Blockchain Revolution</h6>
+                                            <p>Industry experts discuss real-world blockchain applications</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">12:30 PM</div>
+                                        <div class="timeline-content">
+                                            <h6>Networking Lunch</h6>
+                                            <p>Catered lunch with structured networking activities</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">2:00 PM</div>
+                                        <div class="timeline-content">
+                                            <h6>Workshop: Hands-on Machine Learning</h6>
+                                            <p>Interactive session building ML models</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">4:00 PM</div>
+                                        <div class="timeline-content">
+                                            <h6>Startup Pitch Competition</h6>
+                                            <p>10 startups present their innovative solutions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="agenda-day mt-5">
+                                <h5 class="text-primary mb-3">Day 2 - March 16, 2024</h5>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">9:00 AM</div>
+                                        <div class="timeline-content">
+                                            <h6>Keynote: Cybersecurity in 2024</h6>
+                                            <p>Mike Rodriguez, CISO at SecureNet</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">10:30 AM</div>
+                                        <div class="timeline-content">
+                                            <h6>Tech Trends Panel</h6>
+                                            <p>What's next in technology development</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-time">12:00 PM</div>
+                                        <div class="timeline-content">
+                                            <h6>Closing Ceremony & Awards</h6>
+                                            <p>Recognition of innovation and networking wrap-up</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Speakers Tab -->
+                        <div class="tab-pane fade" id="speakers" role="tabpanel">
+                            <h4 class="mb-4">Featured Speakers</h4>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="speaker-card card border-0 shadow-sm">
+                                        <div class="card-body text-center">
+                                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b17c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                                 alt="Dr. Sarah Chen" class="speaker-avatar rounded-circle mb-3">
+                                            <h5>Dr. Sarah Chen</h5>
+                                            <p class="text-muted">AI Research Director, TechCorp</p>
+                                            <p class="small">Leading expert in artificial intelligence with 15+ years of experience in machine learning and neural networks.</p>
+                                            <div class="social-links">
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="Twitter"><i class="bi bi-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="speaker-card card border-0 shadow-sm">
+                                        <div class="card-body text-center">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                                 alt="Mike Rodriguez" class="speaker-avatar rounded-circle mb-3">
+                                            <h5>Mike Rodriguez</h5>
+                                            <p class="text-muted">CISO, SecureNet</p>
+                                            <p class="small">Cybersecurity expert specializing in enterprise security solutions and threat prevention strategies.</p>
+                                            <div class="social-links">
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="Twitter"><i class="bi bi-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="speaker-card card border-0 shadow-sm">
+                                        <div class="card-body text-center">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                                 alt="Emily Watson" class="speaker-avatar rounded-circle mb-3">
+                                            <h5>Emily Watson</h5>
+                                            <p class="text-muted">Blockchain Architect, CryptoTech</p>
+                                            <p class="small">Pioneer in blockchain technology with extensive experience in decentralized applications and smart contracts.</p>
+                                            <div class="social-links">
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="Twitter"><i class="bi bi-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="speaker-card card border-0 shadow-sm">
+                                        <div class="card-body text-center">
+                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                                 alt="David Park" class="speaker-avatar rounded-circle mb-3">
+                                            <h5>David Park</h5>
+                                            <p class="text-muted">Startup Founder & Investor</p>
+                                            <p class="small">Serial entrepreneur and venture capitalist focusing on early-stage tech startups and innovation.</p>
+                                            <div class="social-links">
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                                <a href="#" class="me-2" data-bs-toggle="tooltip" title="Twitter"><i class="bi bi-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Venue Tab -->
+                        <div class="tab-pane fade" id="venue" role="tabpanel">
+                            <h4 class="mb-4">Venue Information</h4>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h5>Moscone Center</h5>
+                                    <p class="text-muted mb-3">747 Howard Street, San Francisco, CA 94103</p>
+                                    
+                                    <h6>Getting There</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-geo-alt-fill text-primary me-2"></i>15 minutes from SFO Airport</li>
+                                        <li><i class="bi bi-train-front-fill text-primary me-2"></i>BART Powell Station (2 blocks)</li>
+                                        <li><i class="bi bi-bus-front-fill text-primary me-2"></i>Multiple bus lines nearby</li>
+                                        <li><i class="bi bi-p-square-fill text-primary me-2"></i>Parking available ($25/day)</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-4">Facilities</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-wifi text-primary me-2"></i>High-speed WiFi throughout</li>
+                                        <li><i class="bi bi-cup-hot text-primary me-2"></i>Multiple dining options</li>
+                                        <li><i class="bi bi-universal-access text-primary me-2"></i>Fully accessible</li>
+                                        <li><i class="bi bi-shield-check text-primary me-2"></i>Security on-site</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="venue-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0977467708!2d-122.40168!3d37.7848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ3JzA1LjMiTiAxMjLCsDI0JzA2LjAiVw!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus" 
+                                                width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="event-sidebar">
+                        <!-- Registration Card -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Register Now</h5>
+                                <div class="price-display mb-3">
+                                    <span class="price">$299</span>
+                                    <small class="text-muted">per person</small>
+                                </div>
+                                <p class="text-muted small mb-3">Early bird pricing until March 1st</p>
+                                <button class="btn btn-primary btn-lg w-100 mb-3" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                                    <i class="bi bi-calendar-plus me-2"></i>Register Now
+                                </button>
+                                <div class="text-muted small">
+                                    <i class="bi bi-people me-1"></i>247 people registered
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Details Card -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body">
+                                <h6 class="card-title">Event Details</h6>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="bi bi-calendar3 text-primary me-2"></i>
+                                        <strong>Date:</strong> March 15-16, 2024
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-clock text-primary me-2"></i>
+                                        <strong>Time:</strong> 9:00 AM - 6:00 PM
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                                        <strong>Location:</strong> Moscone Center, San Francisco
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-tag text-primary me-2"></i>
+                                        <strong>Category:</strong> Technology
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-people text-primary me-2"></i>
+                                        <strong>Capacity:</strong> 500 attendees
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-translate text-primary me-2"></i>
+                                        <strong>Language:</strong> English
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Share Event Card -->
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h6 class="card-title">Share This Event</h6>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-primary flex-fill">
+                                        <i class="bi bi-facebook"></i>
+                                    </button>
+                                    <button class="btn btn-outline-info flex-fill">
+                                        <i class="bi bi-twitter"></i>
+                                    </button>
+                                    <button class="btn btn-outline-primary flex-fill">
+                                        <i class="bi bi-linkedin"></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary flex-fill">
+                                        <i class="bi bi-envelope"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="text-center mb-5">Frequently Asked Questions</h3>
+                    
+                    <div class="accordion" id="eventFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What's included in the registration fee?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#eventFAQ">
+                                <div class="accordion-body">
+                                    Your registration includes access to all sessions, networking events, breakfast and lunch on both days, conference materials, and a certificate of attendance.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What is the refund policy?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#eventFAQ">
+                                <div class="accordion-body">
+                                    Full refunds are available until 30 days before the event. Between 30-14 days, a 50% refund applies. No refunds within 14 days of the event date.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Is there parking available?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#eventFAQ">
+                                <div class="accordion-body">
+                                    Yes, parking is available at the Moscone Center for $25 per day. We recommend using public transportation when possible as the venue is well-connected.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Will sessions be recorded?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#eventFAQ">
+                                <div class="accordion-body">
+                                    Selected keynote sessions will be recorded and made available to registered attendees within 48 hours after the event.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    What should I bring to the event?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#eventFAQ">
+                                <div class="accordion-body">
+                                    Bring your photo ID for registration, business cards for networking, a laptop for hands-on workshops, and comfortable attire. We'll provide notebooks and pens.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Registration Modal -->
+    <div class="modal fade" id="registrationModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register for Global Tech Summit 2024</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registrationForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Company</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Job Title</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Ticket Type *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select ticket type</option>
+                                    <option value="general">General Admission - $299</option>
+                                    <option value="vip">VIP Access - $499</option>
+                                    <option value="student">Student Discount - $149</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Special Requirements</label>
+                                <textarea class="form-control" rows="3" placeholder="Dietary restrictions, accessibility needs, etc."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to EventVerse newsletter for future events
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the <a href="#">Terms and Conditions</a> *
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" form="registrationForm">
+                        <span class="spinner-border spinner-border-sm me-2 d-none" id="submitSpinner"></span>
+                        Complete Registration
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Registration form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.querySelector('button[type="submit"]');
+            const spinner = document.getElementById('submitSpinner');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            spinner.classList.remove('d-none');
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Registration successful! Check your email for confirmation.');
+                document.getElementById('registrationModal').querySelector('.btn-close').click();
+                
+                // Reset form
+                this.reset();
+                submitBtn.disabled = false;
+                spinner.classList.add('d-none');
+            }, 2000);
+        });
+
+        // Countdown timer animation
+        function updateCountdown() {
+            const countdownElements = document.querySelectorAll('.countdown-number');
+            countdownElements.forEach(element => {
+                let currentValue = parseInt(element.textContent);
+                if (currentValue > 0) {
+                    element.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        element.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        }
+
+        setInterval(updateCountdown, 60000); // Update every minute
+    </script>
+
+    <style>
+        .event-hero {
+            margin-top: 76px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-hero-image {
+            position: relative;
+            height: 500px;
+        }
+
+        .event-hero-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .event-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.8), rgba(255, 111, 97, 0.8));
+            display: flex;
+            align-items: center;
+        }
+
+        .event-meta-badges {
+            margin-bottom: 2rem;
+        }
+
+        .event-meta-badges .badge {
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .event-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .event-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .countdown-widget {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .countdown-display {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .countdown-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .nav-tabs-custom {
+            border: none;
+        }
+
+        .nav-tabs-custom .nav-link {
+            border: none;
+            color: #6c757d;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            margin-right: 0.5rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tabs-custom .nav-link.active {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+        }
+
+        .nav-tabs-custom .nav-link:hover {
+            border: none;
+            color: var(--primary-color);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-time {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h6 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .speaker-avatar {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .speaker-card {
+            transition: all 0.3s ease;
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .price-display .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .event-sidebar .card {
+            position: sticky;
+            top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .event-title {
+                font-size: 2rem;
+            }
+            
+            .event-hero-overlay {
+                padding: 2rem 0;
+            }
+            
+            .countdown-display {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .countdown-item {
+                min-width: auto;
+            }
+            
+            .event-sidebar .card {
+                position: static;
+            }
+        }
+    </style>
+</body>
+</html>
