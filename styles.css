@@ -96,6 +96,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    padding-top: 5rem;
 }
 
 .hero-overlay {
